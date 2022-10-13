@@ -2,7 +2,7 @@ package Array;
 
 public class Max_even_odd_subarray {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4};
+        int[] arr = {74,80,8,13,37,49,20,6};
         System.out.println(get_Subarray(arr));
     }
     static  int get_Subarray(int[] arr){
