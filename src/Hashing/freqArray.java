@@ -1,6 +1,7 @@
 package Hashing;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class freqArray {
     public static void main(String[] args){
@@ -10,15 +11,14 @@ public class freqArray {
     public static void calculate(int[] arr){
         HashMap<Integer,Integer>map = new HashMap<>();
         int j =0;
-        for(int i = 0; i < arr.length; i++) {
-            if(map.containsKey(arr[i])){
-                map.put(arr[i],++j);
-            }
-            else {
-                j = 0;
-                map.put(arr[i],++j);
-            }
+        for(int x : arr) {
+        map.put(x,map.getOrDefault(x,0)+1);
         }
-    System.out.println(map);
+        System.out.println(map.get(1));
+  for(Map.Entry<Integer,Integer>e: map.entrySet()){
+      System.out.println(e.getKey()+" -> "+e.getValue());
+
+  }
+
     }
 }

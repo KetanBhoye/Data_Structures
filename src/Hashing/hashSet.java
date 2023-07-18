@@ -11,11 +11,13 @@ public class hashSet {
         set.add("1");
         set.add("2");
         set.add("3");
+
     System.out.println(set);
     System.out.println(set.contains("1"));
         Iterator<String> i = set.iterator();
         while (i.hasNext()){
       System.out.println(i.next());
         }
+
   }
 }
