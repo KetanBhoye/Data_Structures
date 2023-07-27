@@ -2,7 +2,8 @@ package Strings;
 
 public class checkSubsequence {
     public static void main(String[] args){
-    System.out.println(isSubsequence("ketan","kat"));
+    System.out.println(isSubsequence("ADXCPY","AXY"));
+
     }
     public static  boolean isSubsequence(String s,String k){
         int i =0;
