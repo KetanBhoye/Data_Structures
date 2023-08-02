@@ -11,24 +11,36 @@ public class InsertAtPos {
         head.next = N1;
         N1.next = N2;
         N2.next = N3;
+        head = InsertAtpos(head,1,55);
+        Node temp = head;
+
+        while(temp!=null){
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+
     }
 
     public static Node InsertAtpos(Node head,int pos,int x){
         Node tempNode = new Node(x);
-        if(head==null){
-            return head;
+        Node curr = head;
+        if(pos==1){
+            tempNode.next = curr;
+            return tempNode;
         }
 
-        Node curr= head;
-        for(int i=0;i<=pos;i++){
 
+        for(int i=1;i<=pos;i++){
 
-                Node temp = curr;
+                Node temp = head;
+                if(curr==null){
+                    return head;
+                }
+            if(pos-1==i){
 
-            if(pos==i){
-                Node  newNode = new Node(x);
-                newNode.next = curr;
-                temp.next = newNode;
+                tempNode.next = curr.next;
+                temp.next = tempNode;
+
             }
             curr = curr.next;
 
