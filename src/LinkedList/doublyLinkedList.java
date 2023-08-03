@@ -11,10 +11,12 @@ public class doublyLinkedList {
          N1.prev = head;
          N2.prev = N1;
         head = insertAtBegin(head,5);
-         doublyNode curr = N2;
+
+         head = insertAtEnd(head,40);
+        doublyNode curr = head;
          while (curr!=null){
       System.out.println(curr.data);
-      curr = curr.prev;
+      curr = curr.next;
          }
     }
 
@@ -30,4 +32,24 @@ public class doublyLinkedList {
             return newNode;
         }
             }
+
+    public static  doublyNode insertAtEnd(doublyNode head, int x){
+
+
+        doublyNode newNode = new doublyNode(x);
+
+        if(head==null){
+            return  newNode;
+        }
+        doublyNode curr = head;
+
+        while (curr.next!= null){
+            curr= curr.next;
+        }
+        curr.next = newNode;
+        newNode.prev = curr;
+
+        return head;
+    }
+
 }
