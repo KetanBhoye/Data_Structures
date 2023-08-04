@@ -11,6 +11,8 @@ public class circularLinkedList {
         N2.next = N3;
         N3.next = head;
 
+        head = insertAtBegin(head,5);
+        head = insertAtEnd(head, 50);
         traverse(head);
 
     }
@@ -24,4 +26,35 @@ public class circularLinkedList {
         }
         return head;
   }
+  public  static circularList insertAtBegin(circularList head, int x){
+       circularList newNode = new circularList(x);
+
+        if(head==null){
+           return newNode;
+        }
+        newNode.next = head;
+
+        circularList curr = head;
+
+        while(curr.next!=head){
+            curr = curr.next;
+        }
+        curr.next = newNode;
+
+        return  newNode;
+    }
+    public  static circularList insertAtEnd(circularList head,int x){ //suspicious
+        circularList newNode = new circularList(x);
+        if(head==null){
+            return  newNode;
+        }
+        circularList curr = head;
+        while (curr.next!=head){
+            curr = curr.next;
+        }
+        curr.next = newNode;
+        newNode.next = head;
+
+        return head;
+    }
 }
