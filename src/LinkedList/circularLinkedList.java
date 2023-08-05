@@ -13,6 +13,7 @@ public class circularLinkedList {
 
         head = insertAtBegin(head,5);
         head = insertAtEnd(head, 50);
+        head = deleteHead(head);
         traverse(head);
 
     }
@@ -55,6 +56,17 @@ public class circularLinkedList {
         curr.next = newNode;
         newNode.next = head;
 
+        return head;
+    }
+
+    public static  circularList deleteHead(circularList head){
+        if(head == null){
+            return head;
+        }
+        if(head.next == head){
+            return  null;
+        }
+        head = head.next;
         return head;
     }
 }
