@@ -30,8 +30,8 @@ public class pairwiseSwap {
             curr = curr.next.next;
         }
 
-
         return head;
     }
+
 
 }

@@ -13,6 +13,7 @@ public class checkAnagram {
         else
             System.out.println("The two strings are not"
                     + " anagram of each other");
+
     }
     static boolean areAnagram(String s1, String s2)
     {
@@ -25,6 +26,7 @@ public class checkAnagram {
             count[s1.charAt(i)]++;
             count[s2.charAt(i)]--;
         }
+
 
         for(int i=0;i<CHAR;i++){
             if(count[i]!=0)return false;

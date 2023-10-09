@@ -9,9 +9,6 @@ public class stockSpanProblem {
         for(int i = 0; i < arr.length; i++) {
             S.push(arr[i]);
         }
-        naivestockSpanProblem(S,arr.length);
     }
-    public static void naivestockSpanProblem(Stack<Integer>S,int size){
-        if()
-    }
+
 }
