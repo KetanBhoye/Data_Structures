@@ -14,7 +14,7 @@ public class dequeDemo {
         deq.offerLast(40);
         deq.offerLast(50);
         deq.offerLast(60);
-    System.out.println(deq.peekFirst());
+    System.out.println(deq.peek());
     System.out.println(deq.peekLast());
     deq.pollFirst();
     deq.pollLast();
